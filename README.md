@@ -1,11 +1,13 @@
 # Context7 Documentation Gatherer
 
-A CLI tool that uses Context7 and Gemini 2.5 Flash Lite APIs to gather and parse documentation, then saves it in an organized file structure.
+A CLI tool that gathers documentation from the Context7 API, parses its structured
+text response locally, and saves it in an organized file structure.
 
 ## Features
 
 - 🔍 Fetches up-to-date documentation from Context7 API
-- 🤖 Parses and organizes content using Gemini 2.5 Flash Lite
+- 🧭 Ranks search results and supports interactive or automatic library selection
+- 🧩 Parses and organizes Context7's structured text response locally
 - 📁 Saves documentation in structured directories (e.g., `docs/react/installation.md`)
 - 🎯 Supports topic-specific documentation retrieval
 
@@ -19,7 +21,7 @@ A CLI tool that uses Context7 and Gemini 2.5 Flash Lite APIs to gather and parse
 2. **Configure environment variables:**
    ```bash
    cp .env.example .env
-   # Edit .env and add your GEMINI_API_KEY
+   # Edit .env and add your CONTEXT7_API_KEY
    ```
 
 3. **Get API key:**
@@ -111,7 +113,7 @@ docs/
 1. **Library Search**: Uses Context7 search API to find matching libraries
 2. **Smart Selection**: Automatically prefers official documentation using scoring system
 3. **Documentation Fetching**: Retrieves up-to-date docs via Context7 REST API  
-4. **AI Parsing**: Uses Gemini 2.5 Flash Lite to organize content into logical files
+4. **Local Parsing**: Groups Context7's structured sections into logical files
 5. **File Generation**: Saves parsed content as markdown files in organized directories
 
 ### Smart Library Selection
